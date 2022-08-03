@@ -1,0 +1,23 @@
+*{
+    text-align: center;
+    background-color: black;
+    color: whitesmoke;
+}
+
+h1{
+    text-align: center;
+    color: whitesmoke;
+    background-color: olive;
+    margin: 10px 600px 20px 600px;
+    border-radius: 30px;
+}
+
+button{
+    color: whitesmoke;
+    background-color: olive;
+    border-radius: 8px;
+}
+
+#lilbutton{
+    font-size: 20px;
+}
