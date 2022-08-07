@@ -13,8 +13,9 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
   if (isset($_POST['username'])&&isset($_POST['password'])){
     $username=$_POST['username'];
     $password=$_POST['password'];
+    $password2=hash('md5',$password);
 
-    $sql="SELECT name,number,projects FROM users WHERE username = '$username' and password = '$password'";
+    $sql="SELECT name,number,projects FROM users WHERE username = '$username' and password = '$password2'";
 
     $result = mysqli_query($conn,$sql);
     $count = mysqli_num_rows($result);
@@ -32,7 +33,7 @@ if($_SERVER["REQUEST_METHOD"]=="POST"){
          $_SESSION['loginuser_name'] = $currentuser_name;
          $_SESSION['loginuser_number'] = $currentuser_number;
          $_SESSION['loginuser_projects'] = $currentuser_projects;
-        
+
          header("location: page1.php");
       }else {
          $error = "Your User Name or Password is invalid";

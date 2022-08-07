@@ -12,7 +12,7 @@
 <body>
   <header id="center">
 
-    
+
     <h1 id="heading">Welcome!</h1>
     <hr>
     <?php
@@ -25,10 +25,10 @@
     }
       else{echo "<p style='color:blue;'>Please login/register</p>";}?>
     <hr>
-    
-    
+
+
   </header>
-  
+
 
 </body>
 
@@ -67,7 +67,7 @@
     text-align: center;
   }
 
-  
+
 </style>
 
 </html>

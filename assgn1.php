@@ -1,12 +1,12 @@
 <?php
     // phpcs:ignoreFile
-    // Write PHP code to update the data of a given table 
+    // Write PHP code to update the data of a given table
 
     $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "nslab";
-    
+
     $username1=$_REQUEST['username'];
     $name=$_REQUEST['name'];
     $number=$_REQUEST['number'];
@@ -32,10 +32,11 @@
         $conn->close();
     }else{
         echo 'Strong password.';
-    
+
+    $password2=hash('md5',$password1);
 
     // Update data of John Doe in the table
-    $sql = "INSERT INTO users  VALUES('$username1','$name','$number','$password1','$projects')";
+    $sql = "INSERT INTO users  VALUES('$username1','$name','$number','$password2','$projects')";
 
     if ($conn->query($sql) === TRUE) {
         echo "Record updated successfully";
